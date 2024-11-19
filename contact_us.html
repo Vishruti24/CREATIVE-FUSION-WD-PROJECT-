@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* Contact Us Section */
+        .contact-us {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-us h1 {
+            font-size: 2.5rem;
+            color: #4a148c;
+        }
+
+        .contact-us p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .info-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin: 20px;
+            max-width: 300px;
+            flex-grow: 1;
+        }
+
+        .info-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            color: #4a148c;
+        }
+
+        .info-item p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            max-width: 48%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            max-width: 100%;
+            min-height: 150px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #4a148c;
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #6a1b9a;
+        }
+
+        /* Map Section */
+        .map {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .contact-form input, .contact-form textarea {
+                max-width: 100%;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-item {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Us Section -->
+    <div class="container">
+        <section class="contact-us">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have a question, need assistance, or just want to talk design, feel free to reach out.</p>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="contact-info">
+            <div class="info-item">
+                <h3>Email</h3>
+                <p>support@yourcompany.com</p>
+            </div>
+            <div class="info-item">
+                <h3>Phone</h3>
+                <p>+123 456 7890</p>
+            </div>
+            <div class="info-item">
+                <h3>Office Location</h3>
+                <p>123 Design Street, Creativity City, CA 94105</p>
+            </div>
+        </section>
+
+        <!-- Contact Form Section -->
+        <section class="contact-form">
+            <form action="submit_contact.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message">
+            </form>
+        </section>
+
+        <!-- Map Section -->
+        <section class="map">
+            <h2>Our Location</h2>
+            <!-- Google Maps Embed -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434157985!2d-122.40641718467674!3d37.787056979756944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808a8b97f4df%3A0x4c5f2b4c77ae57b1!2s123%20Design%20St%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1606776762349!5m2!1sen!2sus" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0;" 
+                allowfullscreen="" 
+                aria-hidden="false" 
+                tabindex="0">
+            </iframe>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Responsive Product Design</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+            /* Base styles for the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 1px 2px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+                        font-size: 18px;
+
+        }
+
+        .navbar h1 {
+            color: white;
+            font-size: 28px;
+        }
+
+        /* Navigation links */
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #4CAF50;
+            border-radius: 5px;
+        }
+
+        /* Styles for mobile menu */
+        .navbar .menu-icon {
+            display: none;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Hide menu for mobile by default */
+        .navbar ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Media query for mobile view */
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: black;
+            }
+
+            .navbar ul li {
+                margin: 0;
+                border-bottom: 1px solid white;
+                text-align: center;
+            }
+
+            .navbar .menu-icon {
+                display: block;
+            }
+
+            .navbar.active ul {
+                display: flex;
+            }
+        }
+
+        </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Creative Fusion</h1>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+	<section class="products">
+		<h2>Our Products</h2>
+		<div class="all-products">
+			<div class="product">
+				<img src="images/1.png">
+				<div class="product-info">
+					<h4 class="product-title">Logo Design
+					</h4>
+					
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+			<div class="product">
+				<img src="images/2_2.png">
+				<div class="product-info">
+					<h4 class="product-title">Banner Design
+					</h4>
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+			<div class="product">
+				<img src="images/3_3.png">
+				<div class="product-info">
+					<h4 class="product-title">Advertisement Design
+					</h4>
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+			<div class="product">
+				<img src="images/4_4.jpg">
+				<div class="product-info">
+					<h4 class="product-title">Visiting Card Design
+						</h4>
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+                    <div class="product">
+				<img src="images/5.png">
+				<div class="product-info">
+					<h4 class="product-title">Artwork Design
+						</h4>
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+                    <div class="product">
+				<img src="images/66.jpg">
+				<div class="product-info">
+					<h4 class="product-title">Thumbnail Design
+						</h4>
+					<a class="product-btn" href="#">More</a>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+</html>
